@@ -1,0 +1,63 @@
+body {
+    background: rgb(138, 138, 88);
+    font-family: "Times New Roman", Times, serif;
+    margin: 8px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0 0 14px 0;
+}
+
+/* Contenedor flex */
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   /* reparte el espacio horizontal */
+    align-items: center;             /* centra las cajas en vertical */
+    width: 82%;
+    height: 500px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background: #cccccc;
+    border: 1px solid gray;
+}
+
+/* Cajas */
+.caja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 0 4px;
+    border: 1px solid gray;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Caja 1: ocupa todo el espacio sobrante */
+.caja1 {
+    flex: 1;
+    background: rgb(32, 72, 85);
+    order: 2;
+}
+
+/* Caja 2: queda a la derecha */
+.caja2 {
+    width: 200px;
+    background: rgb(105, 23, 23);
+    order: 3;
+}
+
+/* Caja 3: aunque está al final en el HTML, se muestra primero */
+.caja3 {
+    width: 200px;
+    background: rgb(61, 194, 61);
+    order: 1;
+}
+
+.volver {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}

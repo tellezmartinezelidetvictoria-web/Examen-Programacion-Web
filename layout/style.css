@@ -1,0 +1,134 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(219, 159, 159);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Cabecera ---------- */
+header {
+    background: rgb(133, 45, 99);
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    border-bottom: 2px dashed black;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+/* ---------- Menú ---------- */
+nav {
+    background: lightblue;
+    padding: 10px 6px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 12px;
+}
+
+nav a {
+    font-size: 12px;
+    color: darkblue;
+}
+
+/* ---------- Contenedor principal (Flexbox) ---------- */
+.contenedor {
+    display: flex;
+    flex: 1;               /* ocupa el espacio hasta el pie de página */
+    align-items: flex-start;
+}
+
+/* ---------- Contenido ---------- */
+section {
+    flex: 1 1 80%;
+    align-self: stretch;
+    background: green;
+    color: white;
+    padding: 32px 25px 0 25px;
+    min-height: 348px;
+}
+
+article {
+    width: 92%;
+    border-top: 1px solid lightgray;
+    padding: 10px 0 6px 0;
+}
+
+article:last-child {
+    border-bottom: 1px solid lightgray;
+}
+
+article h2 {
+    font-size: 18px;
+}
+
+article p {
+    font-size: 12px;
+}
+
+/* ---------- Barra lateral ---------- */
+aside {
+    flex: 0 0 19%;
+    background: orange;
+    color: black;
+    padding: 8px 6px;
+    height: 310px;
+}
+
+aside h3 {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+aside form {
+    display: flex;
+}
+
+aside input[type="search"] {
+    width: 100px;
+    font-size: 11px;
+}
+
+aside input[type="submit"] {
+    font-size: 11px;
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+/* ---------- Pantallas pequeñas ---------- */
+@media (max-width: 600px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    aside {
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
+}

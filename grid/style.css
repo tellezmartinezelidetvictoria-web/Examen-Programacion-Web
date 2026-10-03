@@ -1,0 +1,87 @@
+body {
+    background: rgb(179, 156, 126);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 8px;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 6px 0 12px 0;
+}
+
+/* Contenedor Grid */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    grid-template-rows: 80px 40px 1fr 40px;
+    grid-template-areas:
+        "cabecera cabecera"
+        "menu menu"
+        "contenido barra"
+        "pie pie";
+    gap: 4px;
+    height: 80vh;
+    min-height: 520px;
+    padding: 2px;
+    background: black;
+    border: 2px solid black;
+}
+
+/* Texto común a todas las celdas */
+.contenedor > div {
+    padding-top: 12px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #222;
+}
+
+.cabecera {
+    grid-area: cabecera;
+    background: rgb(60, 90, 109);
+}
+
+.menu {
+    grid-area: menu;
+    background: lightyellow;
+    padding-top: 14px;
+}
+
+.contenido {
+    grid-area: contenido;
+    background: rgb(155, 90, 65);
+}
+
+.barra-lateral {
+    grid-area: barra;
+    background: #472c1f;
+    color: black;
+}
+
+.pie {
+    grid-area: pie;
+    background: rgb(126, 53, 65);
+    padding-top: 14px;
+}
+
+/* Pantallas pequeñas: una sola columna */
+@media (max-width: 600px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 40px 200px 200px 40px;
+        grid-template-areas:
+            "cabecera"
+            "menu"
+            "contenido"
+            "barra"
+            "pie";
+        height: auto;
+    }
+}
+
+.volver {
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
